@@ -1,4 +1,4 @@
-input = open("jan1/day1.txt", "r")
+input = open("dec1/day1.txt", "r")
 list = []
 
 elfTotalCal = 0
