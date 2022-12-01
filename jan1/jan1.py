@@ -12,22 +12,7 @@ for line in input:
 if elfTotalCal != 0:
     list.append(elfTotalCal)
 
-mostCal = 0
-secondMostCal = 0
-thirdMostCal = 0
-for item in list:
-    if item >= mostCal:
-        thirdMostCal = secondMostCal
-        secondMostCal = mostCal
-        mostCal = item
-    elif item >= secondMostCal:
-        thirdMostCal = secondMostCal
-        secondMostCal = item
-    elif item >= thirdMostCal:
-        thirdMostCal = item
-        
+list.sort(reverse= True)
 
-top3 = mostCal + secondMostCal + thirdMostCal
-
-print("max calories carried:", mostCal)
-print("calories carried by top 3:", top3)
+print("max calories carried:", list[0])
+print("calories carried by top 3:", (list[0] + list[1] + list[2]))
